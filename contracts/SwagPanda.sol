@@ -39,6 +39,10 @@ contract SwagPanda is ERC721Enumerable, ReentrancyGuard, Ownable {
     function setCostToMint(uint256 _costToMint) public onlyOwner {
         costToMint = _costToMint;
     }
+
+    function withdraw() public onlyOwner {
+        payable(owner()).transfer(address(this).balance);
+    }
       
-    constructor() ERC721("Swag Panda", "Swag Panda") Ownable() {}
+    constructor() ERC721("Swag Panda", "SwagPanda") Ownable() {}
 }
