@@ -1,0 +1,12 @@
+/* ./assets/css/tailwind.css */
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
+
+.container {
+    @apply sm:w-2/3 sm:mx-auto w-full px-4 sm:px-0;
+}
+
+body {
+    @apply bg-purple-200;
+}
