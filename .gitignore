@@ -98,7 +98,7 @@ cache
 artifacts/@openzeppelin
 artifacts/build-info
 
-/contracts
+# contracts
 scripts/*
 test
 
