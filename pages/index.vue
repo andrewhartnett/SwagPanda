@@ -7,15 +7,19 @@
       <p>
         This project was created for the purpose of learning and having fun.
         These tokens may have utility in the future, but for now, they are just Swag Pandas you can use however you like.
+      </p>
+        
+      <p>
         Have fun, play at your own risk, not financial advice, etc.
       </p>
+      
     </div>
     <div class="text-center mx-auto mt-16">
       <div class="text-lg my-4 font-bold">Cost to mint is TBD</div>
       <!-- <nuxt-link to="/mint" class="bg-purple-900 text-white py-4 px-8 hover:bg-purple-600 inline-block disabled">MINT</nuxt-link> -->
       <button disabled class="bg-purple-900 text-white py-4 px-8 hover:bg-purple-600 inline-block disabled">MINT COMING SOON</button>
     </div>
-    <div class="flex w-2/3 mx-auto">
+    <div class="sm:flex sm:w-2/3 sm:mx-auto">
       <div v-for="panda in pandas" :key="panda.name">
         <img :src="panda.image" :alt="panda.name">
         <p class="text-center">{{panda.name}}</p>
