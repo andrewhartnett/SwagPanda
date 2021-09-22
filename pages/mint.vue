@@ -5,8 +5,18 @@
         
 
         <div v-if="admin" class="mt-6">
-            <input v-model="mintAddress" type="text" class="p-3" placeholder="Wallet Address">
-            <button :disabled="minting" class="bg-gray-700 text-white p-3" @click.prevent="mintTo">Mint To Address</button>
+            <div>
+                <input v-model="mintAddress" type="text" class="p-3" placeholder="Wallet Address">
+                <button :disabled="minting" class="bg-gray-700 text-white p-3" @click.prevent="mintTo">Mint To Address</button>
+            </div>
+            <div class="mt-4">
+                <input v-model="costToMint" type="text" class="p-3" placeholder="Cost in ETH">
+                <button class="bg-gray-700 text-white p-3" @click.prevent="withdraw">Set Cost to Mint</button>
+            </div>
+            <div class="mt-4">
+                <button class="bg-gray-700 text-white p-3" @click.prevent="withdraw">Withdraw</button>
+            </div>
+            
         </div>
 
         <div v-if="minting" class="flex mt-12">
@@ -31,7 +41,7 @@
 import { ethers } from 'ethers'
 import axios from 'axios'
 import SwagPanda from '../artifacts/contracts/SwagPanda.sol/SwagPanda.json'
-const SwagPandaAddress = '0xC4F209862B39b6b5B5D1d6892D24e8A8D351b370'
+const SwagPandaAddress = '0xbEff8D4e76239B1205d3E649D12097E79707De83'
 
 export default {
 
@@ -40,7 +50,8 @@ export default {
             pandas: [],
             admin: false,
             mintAddress: '',
-            minting: false
+            minting: false,
+            costToMint: ''
         }
     },
     mounted() {
@@ -49,7 +60,6 @@ export default {
     methods: {
         async mint() {
             if (typeof window.ethereum !== 'undefined') {
-                // const [account] = await this.requestAccount()
                 const provider = new ethers.providers.Web3Provider(window.ethereum);
                 const signer = provider.getSigner()
                 const contract = new ethers.Contract(SwagPandaAddress, SwagPanda.abi, signer)
@@ -85,6 +95,8 @@ export default {
                     this.minting = true
                     await contract.ownerClaim(address)
                     this.minting = false
+
+                    this.mintAddress = ''
                 }
                 // console.log(account)
                 // await contract.ownerClaim()
@@ -133,6 +145,13 @@ export default {
             const owner = await contract.owner()
 
             this.admin = thisAccount === owner
+        },
+        async withdraw() {
+            const provider = new ethers.providers.Web3Provider(window.ethereum);
+            const signer = provider.getSigner()
+            const contract = new ethers.Contract(SwagPandaAddress, SwagPanda.abi, signer)
+
+            await contract.withdraw()
         }
     }
 

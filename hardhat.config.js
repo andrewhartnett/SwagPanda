@@ -1,4 +1,5 @@
 require("@nomiclabs/hardhat-waffle");
+require("@nomiclabs/hardhat-etherscan");
 
 // This is a sample Hardhat task. To learn how to create your own go to
 // https://hardhat.org/guides/create-task.html
@@ -37,7 +38,7 @@ const {privateKey, alchemyApiKeyStage, alchemyApiKeyProd, etherscanApiKey} = req
       url: `https://eth-mainnet.alchemyapi.io/v2/${alchemyApiKeyProd}`,
       accounts: [privateKey],
       // gas: gas,
-      // gasPrice: gasPrice, 
+      // gasPrice: 46000000000,
     }
   },
   etherscan: {
