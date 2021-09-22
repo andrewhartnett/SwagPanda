@@ -31,7 +31,7 @@
 import { ethers } from 'ethers'
 import axios from 'axios'
 import SwagPanda from '../artifacts/contracts/SwagPanda.sol/SwagPanda.json'
-const SwagPandaAddress = '0x5FbDB2315678afecb367f032d93F642f64180aa3'
+const SwagPandaAddress = '0xC4F209862B39b6b5B5D1d6892D24e8A8D351b370'
 
 export default {
 
@@ -53,11 +53,16 @@ export default {
                 const provider = new ethers.providers.Web3Provider(window.ethereum);
                 const signer = provider.getSigner()
                 const contract = new ethers.Contract(SwagPandaAddress, SwagPanda.abi, signer)
-                
-                // console.log(account)
+
+                const res = await contract.costToMint()
+
+                const overrides = {
+                    value: res.toString()
+                }
                 this.minting = true
-                await contract.claim()
+                await contract.claim(overrides)
                 this.minting = false
+                
             }
         },
         async mintTo() {
