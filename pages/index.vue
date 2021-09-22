@@ -15,9 +15,9 @@
       
     </div>
     <div class="text-center mx-auto mt-16">
-      <div class="text-lg my-4 font-bold">Cost to mint is TBD</div>
-      <!-- <nuxt-link to="/mint" class="bg-purple-900 text-white py-4 px-8 hover:bg-purple-600 inline-block disabled">MINT</nuxt-link> -->
-      <button disabled class="bg-purple-900 text-white py-4 px-8 hover:bg-purple-600 inline-block disabled">MINT COMING SOON</button>
+      <div class="text-lg my-4 font-bold">Cost to mint is 0.01ETH</div>
+      <nuxt-link to="/mint" class="bg-purple-900 text-white py-4 px-8 hover:bg-purple-600 inline-block disabled">MINT</nuxt-link>
+      <!-- <button disabled class="bg-purple-900 text-white py-4 px-8 hover:bg-purple-600 inline-block disabled">MINT COMING SOON</button> -->
     </div>
     <random-pandas />
   </div>
