@@ -5,9 +5,9 @@
         </div>
         <div class="sm:flex sm:w-1/3 sm:justify-end">
             <!-- <nuxt-link to="/" class="text-purple-700 underline block">Opensea</nuxt-link> -->
-            <nuxt-link to="https://twitter.com/AndyHartnett12" class="text-purple-700 underline block mx-4" target="_blank">Twitter</nuxt-link>
+            <a href="https://twitter.com/AndyHartnett12" class="text-purple-700 underline block mx-4" target="_blank">Twitter</a>
             <!-- <nuxt-link to="/" class="text-purple-700 underline block">Discord</nuxt-link> -->
-            <nuxt-link to="https://etherscan.io/address/0xbEff8D4e76239B1205d3E649D12097E79707De83#code" class="text-purple-700 underline block mx-4" target="_blank">Contract</nuxt-link>
+            <a href="https://etherscan.io/address/0xbEff8D4e76239B1205d3E649D12097E79707De83#code" class="text-purple-700 underline block mx-4" target="_blank">Contract</a>
         </div>
     </nav>
 </template>
