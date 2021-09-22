@@ -15,7 +15,12 @@ export default {
       { charset: 'utf-8' },
       { name: 'viewport', content: 'width=device-width, initial-scale=1' },
       { hid: 'description', name: 'description', content: '' },
-      { name: 'format-detection', content: 'telephone=no' }
+      { name: 'format-detection', content: 'telephone=no' },
+      { name: 'twitter:card', content: 'summary' },
+      { name: 'twitter:url', content: 'https://swagpanda.xyz' },
+      { name: 'twitter:title', content: 'SwagPanda' },
+      { name: 'twitter:description', content: 'SwagPanda NFT' },
+      { name: 'twitter:image', content: 'https://swagpanda.xyz/SwagPandaLogo.png' },
     ],
     link: [
       { rel: 'icon', type: 'image/x-icon', href: '/favicon.ico' }
