@@ -27,8 +27,7 @@ dist
 
 #Hardhat files
 cache
-artifacts/@openzeppelin
-artifacts/build-info
+artifacts/
 
 # contracts
 scripts/*
