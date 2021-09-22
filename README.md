@@ -1,16 +1,28 @@
 # Swag Panda
 
-Swag Panda is a learning resource for NFT landing pages, minting, etc.
-This will be more detailed in the future!
+Swag Panda is a learning resource for creating an ERC721 NFT with a Landing Page you can mint from.
 
-HardHat stuff:
+## Getting Started
 
+### Create Secrets File, Update With Your Own Info
 ```shell
-npx hardhat accounts
+cp secrets-example.json secrets.json
+```
+
+### Nuxt Page
+```shell
+npm install
+npm run dev
+```
+
+### Local Contract Testing
+```shell
 npx hardhat compile
-npx hardhat clean
-npx hardhat test
 npx hardhat node
 npx hardhat run scripts/deploy.js --network localhost
-npx hardhat help
+```
+
+### Contract Issues?
+```shell
+npx hardhat clean
 ```
