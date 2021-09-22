@@ -103,3 +103,5 @@ scripts/*
 test
 
 .editorconfig
+
+secrets.json
