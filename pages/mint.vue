@@ -1,7 +1,8 @@
 <template>
     <div class="mt-20">
-        <button class="bg-purple-700 text-white p-3 mx-2" @click.prevent="mint">Mint!</button>
-        <button class="bg-purple-700 text-white p-3 mx-2" @click.prevent="getPandas">Get pandas!</button>
+        <button class="bg-purple-700 text-white p-3 mx-2" @click.prevent="getPandas">Show My Pandas!</button>
+        <button class="bg-purple-700 text-white p-3 mx-2" @click.prevent="mint">Mint A Panda!</button>
+        
         
 
         <div v-if="admin" class="mt-6">
