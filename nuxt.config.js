@@ -21,6 +21,10 @@ export default {
       { name: 'twitter:title', content: 'SwagPanda' },
       { name: 'twitter:description', content: 'SwagPanda NFT' },
       { name: 'twitter:image', content: 'https://swagpanda.xyz/SwagPandaLogo.png' },
+      { name: 'og:title', content: 'SwagPanda' },
+      { name: 'og:type', content: 'website' },
+      { name: 'og:url', content: 'https://swagpanda.xyz' },
+      { name: 'og:image', content: 'https://swagpanda.xyz/SwagPandaLogo.png' },
     ],
     link: [
       { rel: 'icon', type: 'image/x-icon', href: '/favicon.ico' }
