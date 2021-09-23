@@ -3,6 +3,8 @@
 Swag Panda is a learning resource for creating an ERC721 NFT with a Landing Page you can mint from.
 Created by [@andyhartnett12](https://twitter.com/AndyHartnett12) 
 
+If this repo helps you out, consider minting a SwagPanda as a token of gratitude at https://swagpanda.xyz
+
 ## Getting Started
 
 ### Create Secrets File, Update With Your Own Info
