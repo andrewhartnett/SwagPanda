@@ -31,7 +31,6 @@ artifacts/@openzeppelin
 artifacts/build-info
 
 # contracts
-scripts/*
 
 # Testing For Now...
 test
